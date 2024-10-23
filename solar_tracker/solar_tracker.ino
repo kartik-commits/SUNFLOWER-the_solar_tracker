@@ -29,13 +29,13 @@ void loop() {
   // Check if LDR 1 detects light (HIGH)
   if (ldr1State == HIGH && ldr2State == LOW) {
    
-    myServo.write(0);  // Move servo to 0 degrees
-    Serial.println("LDR1 detected light. Servo moving to 0 degrees.");
+    myServo.write(45);  // Move servo to 45 degrees
+    Serial.println("LDR1 detected light. Servo moving to 45 degrees.");
   }
   // Check if LDR 2 detects light (HIGH)
   else if (ldr2State == HIGH && ldr1State == LOW) {
-    myServo.write(180);  // Move servo to 180 degrees
-    Serial.println("LDR2 detected light. Servo moving to 180 degrees.");
+    myServo.write(135);  // Move servo to 135 degrees
+    Serial.println("LDR2 detected light. Servo moving to 135 degrees.");
   }
   // If both or neither LDRs detect light, keep the servo at 90 degrees
   else {
